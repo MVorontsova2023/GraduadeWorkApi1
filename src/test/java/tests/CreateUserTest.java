@@ -34,7 +34,7 @@ public class CreateUserTest extends BaseTest{
                 .password("123456")
                 .generate_magic_link(false)
                 .build();
-        postRequest(endpoint, 404, requestBody);
+        postRequest(endpoint, 400, requestBody);
     }
     @Test
     @DisplayName("Create new user with empty password")
@@ -71,7 +71,7 @@ public class CreateUserTest extends BaseTest{
                 .password("123456")
                 .generate_magic_link(false)
                 .build();
-        postRequest(endpoint, 404, requestBody);
+        postRequest(endpoint, 400, requestBody);
     }
     @Test
     @DisplayName("Create new user without sings after at ")
@@ -83,7 +83,7 @@ public class CreateUserTest extends BaseTest{
                 .password("123456")
                 .generate_magic_link(false)
                 .build();
-        postRequest(endpoint, 404, requestBody);
+        postRequest(endpoint, 400, requestBody);
     }
         @Test
         @DisplayName("Create new user with long size email ")
@@ -95,7 +95,7 @@ public class CreateUserTest extends BaseTest{
                     .password("123456")
                     .generate_magic_link(false)
                     .build();
-            postRequest(endpoint, 404, requestBody);
+            postRequest(endpoint, 400, requestBody);
     }
 
     @AfterEach
