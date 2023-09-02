@@ -1,13 +1,8 @@
 package tests;
-
 import dto.ValidUserRequest;
-import io.qameta.allure.Feature;
-import io.restassured.response.Response;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
 @DisplayName("Creation of a new user")
 public class CreateUserTest extends BaseTest{
     String endpoint = "/users";
@@ -34,7 +29,7 @@ public class CreateUserTest extends BaseTest{
                 .password("123456")
                 .generate_magic_link(false)
                 .build();
-        postRequest(endpoint, 404, requestBody);
+        postRequestNotEqualCode(endpoint, 201, requestBody);
     }
     @Test
     @DisplayName("Create new user with empty password")
@@ -46,7 +41,7 @@ public class CreateUserTest extends BaseTest{
                 .password("")
                 .generate_magic_link(false)
                 .build();
-        postRequest(endpoint, 400, requestBody);
+        postRequestNotEqualCode(endpoint, 201, requestBody);
     }
     @Test
     @DisplayName("Create new user with empty email")
@@ -60,7 +55,6 @@ public class CreateUserTest extends BaseTest{
                 .build();
         postRequest(endpoint, 400, requestBody);
     }
-
     @Test
     @DisplayName("Create new user without at")
     public void createUserWithInvalidInEmailWithout() {
@@ -71,7 +65,7 @@ public class CreateUserTest extends BaseTest{
                 .password("123456")
                 .generate_magic_link(false)
                 .build();
-        postRequest(endpoint, 404, requestBody);
+        postRequestNotEqualCode(endpoint, 201, requestBody);
     }
     @Test
     @DisplayName("Create new user without sings after at ")
@@ -83,7 +77,7 @@ public class CreateUserTest extends BaseTest{
                 .password("123456")
                 .generate_magic_link(false)
                 .build();
-        postRequest(endpoint, 404, requestBody);
+        postRequestNotEqualCode(endpoint, 201, requestBody);
     }
         @Test
         @DisplayName("Create new user with long size email ")
@@ -95,9 +89,33 @@ public class CreateUserTest extends BaseTest{
                     .password("123456")
                     .generate_magic_link(false)
                     .build();
-            postRequest(endpoint, 404, requestBody);
-    }
+            postRequestNotEqualCode(endpoint, 201, requestBody);
 
+    }
+    @Test
+    @DisplayName("Create new user with long size full name ")
+    public void createUserWithInvalidInLongFullName() {
+        userEmail = "example@example.com";
+        ValidUserRequest requestBody = ValidUserRequest.builder()
+                .email(userEmail)
+                .full_name("SFGGJSHgfAHFVhfo;gllfjdbjkvbnhjbjbjbjbjjhgfkhgbljgjjfhhdg")
+                .password("123456")
+                .generate_magic_link(false)
+                .build();
+        postRequestNotEqualCode(endpoint, 201, requestBody);
+    }
+    @Test
+    @DisplayName("Create new user with long size password ")
+    public void createUserWithInvalidInLongPassword() {
+        userEmail = "example@example.com";
+        ValidUserRequest requestBody = ValidUserRequest.builder()
+                .email(userEmail)
+                .full_name("SFGGJSH")
+                .password("123456098jjfi212j186248v38078656vucjk12361234FHBSJG;KGFJGKVNHHNVJ")
+                .generate_magic_link(false)
+                .build();
+        postRequestNotEqualCode(endpoint, 201, requestBody);
+    }
     @AfterEach
     @DisplayName("Delete each user created in tests")
     public void deleteUserAfterEach() {

@@ -1,13 +1,9 @@
 package tests;
 
 import dto.ValidUserRequest;
-import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-
-import java.net.URLEncoder;
-import java.nio.charset.StandardCharsets;
 
 @DisplayName("User deletion Test Class")
 public class DeleteUserTest extends BaseTest{

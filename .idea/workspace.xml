@@ -8,7 +8,10 @@
       <change afterPath="$PROJECT_DIR$/allure-results/43ead3d5-f304-4fc6-8132-d6978be70f09-container.json" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/allure-results/d663aafe-6a0a-4865-96f3-8fea75dab572-result.json" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/allure-results/fe15d185-98de-446d-bbef-b431635aab60-container.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/tests/CreateUserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/CreateUserTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/DeleteUserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/DeleteUserTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,11 +52,12 @@
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;build.tools&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="JUnit.CreateUserTest.successfulCreateUser">
+  <component name="RunManager" selected="JUnit.CreateUserTest.createUserWithoutFullName">
     <configuration name="CreateUserTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="GraduadeWorkApi1" />
       <extension name="coverage">
@@ -101,6 +105,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="CreateUserTest.createUserWithoutFullName" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="GraduadeWorkApi1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.CreateUserTest" />
+      <option name="METHOD_NAME" value="createUserWithoutFullName" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="CreateUserTest.successfulCreateUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="GraduadeWorkApi1" />
       <extension name="coverage">
@@ -117,28 +137,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DeleteUserTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="GraduadeWorkApi1" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.DeleteUserTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.CreateUserTest.createUserWithoutFullName" />
+        <item itemvalue="JUnit.CreateUserTest.createUserWithInvalidInLongEmail" />
         <item itemvalue="JUnit.CreateUserTest.successfulCreateUser" />
         <item itemvalue="JUnit.CreateUserTest" />
         <item itemvalue="JUnit.CreateUserTest.createUserWithoutEmail" />
-        <item itemvalue="JUnit.CreateUserTest.createUserWithInvalidInLongEmail" />
-        <item itemvalue="JUnit.DeleteUserTest" />
       </list>
     </recent_temporary>
   </component>
@@ -157,6 +162,10 @@
       <workItem from="1692341350242" duration="5322000" />
       <workItem from="1692515785382" duration="25000" />
       <workItem from="1692521052860" duration="1941000" />
+      <workItem from="1692774915487" duration="848000" />
+      <workItem from="1692862741074" duration="1445000" />
+      <workItem from="1692865397944" duration="2348000" />
+      <workItem from="1693079721017" duration="3959000" />
     </task>
     <task id="LOCAL-00001" summary="Init">
       <option name="closed" value="true" />
