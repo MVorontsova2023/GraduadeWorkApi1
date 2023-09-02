@@ -10,9 +10,7 @@ import org.hamcrest.Matchers;
 public class BaseTest {
     final static String BASE_URI = "https://studio-api.softr.io/v1/api";
     final static String API_KEY = "khIbAyJIU5CIuh1oDuBRx1s49";
-//    final static String DOMAIN = "erich416.softr.app";
-    final static String DOMAIN = "jere237.softr.app";
-//    jere237.softr.app
+    final static String DOMAIN = "erich416.softr.app";
 
 
 
